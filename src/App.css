@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- header ----------- */
+.header, footer {
+  background-color: #f55a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 1em;
+  color: white;
+}
+
+.header--title {
+  font-size: 2em;
+}
+
+.logo {
+  font-size: 3em;
+}
+
+/* ---------- card ---------- */
+.card--section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  padding: 2em 0;
+}
+
+.card--img {
+  flex: 1 0 300px;
+}
+
+.card--img > img{
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 0.3em;
+  transition: transform 0.2s ease;
+}
+
+.card--img:hover > img {
+  transform: scale(1.1); /* Increase the scale by 10% (1.1 times the original size) */
+}
+
+.card--text {
+  margin: 1em 0em 0em 2em;
+  flex: 5 0 300px;
+}
+
+.card--location {
+  font-size: 1em;
+  font-weight: 700;
+  margin-right: 1.5em;
+  margin-left: 0.3em;
+}
+
+
+.card--text > i {
+  color: #f55a5a;
+}
+
+
+
+.card--title {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.card--date {
+  font-size: 1.5em;
+  margin: 0px 0px 30px 0px;
+  font-weight: 600;
+}
+
+.card--description {
+  max-width: 600px;
+  font-size: 0.75em;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 150%;
+  
+}
+
+@media (max-width: 800px) {
+  .card--img,
+  .card--text {
+    flex: 100%; /* On screens less than 750px, make both divs occupy the full width */
+    margin: 1em 0 0 0; /* Remove the margin between the divs to stack them vertically */
+  }
+
+  .card--img {
+    margin-top: 1em; /* Add some spacing between the divs */
+  }
+}
+
+
